@@ -1,0 +1,26 @@
+--- src/java/org/osjava/sj/loader/SJDataSource.java	2008-08-05 16:41:45.000000000 +0200
++++ src/java/org/osjava/sj/loader/SJDataSource.java-gil	2012-05-22 10:04:02.104688014 +0200
+@@ -34,10 +34,13 @@
+ 
+ import java.sql.Connection;
+ import java.sql.SQLException;
++import java.sql.SQLFeatureNotSupportedException;
+ import javax.sql.DataSource;
+ import java.sql.DriverManager;
+ import java.io.PrintWriter;
++import java.lang.NullPointerException;
+ import java.util.Properties;
++import java.util.logging.Logger;
+ 
+ /**
+  * A basic implementation of a DataSource. 
+@@ -154,5 +157,9 @@
+         throw new SQLException("This object is not a wrapper");
+     }
+ 
++    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
++        throw new NullPointerException();
++    }
++
+ }
+ 
