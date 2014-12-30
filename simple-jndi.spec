@@ -1,9 +1,9 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:          simple-jndi
 Version:       0.11.4.1
-Release:       4.0%{?dist}
+Release:       6.1
 Summary:       A JNDI implementation
-
+Group:         Development/Java
 License:       BSD
 Url:           http://code.google.com/p/osjava/
 Source0:       http://osjava.googlecode.com/svn/dist/releases/official/simple-jndi/simple-jndi-0.11.4.1-src.tar.gz
@@ -49,7 +49,6 @@ The files may be either on the file system or in the classpath.
 %package javadoc
 
 Summary:       Javadoc for %{name}
-Requires:      jpackage-utils
 
 %description javadoc
 This package contains javadoc for %{name}.
@@ -83,10 +82,7 @@ install -pm 644 %{SOURCE1} %{buildroot}%{_mavenpomdir}/JPP-%{name}.pom
 mkdir -p %{buildroot}%{_javadocdir}/%{name}
 cp -pr dist/docs/api/* %{buildroot}%{_javadocdir}/%{name}/
 
-%files
-%{_javadir}/%{name}.jar
-%{_mavenpomdir}/JPP-%{name}.pom
-%{_mavendepmapfragdir}/%{name}
+%files -f .mfiles
 %doc LICENSE.txt
 
 %files javadoc
