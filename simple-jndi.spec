@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:          simple-jndi
 Version:       0.11.4.1
-Release:       6.2
+Release:       6.3
 Summary:       A JNDI implementation
 Group:         Development/Java
 License:       BSD
