@@ -5,7 +5,7 @@ Release:       6.3
 Summary:       A JNDI implementation
 Group:         Development/Java
 License:       BSD
-Url:           http://code.google.com/p/osjava/
+Url:           https://code.google.com/p/osjava/
 Source0:       http://osjava.googlecode.com/svn/dist/releases/official/simple-jndi/simple-jndi-0.11.4.1-src.tar.gz
 # wget -O simple-jndi-0.11.4.1.pom http://osjava.googlecode.com/svn/releases/simple-jndi-0.11.4.1/pom.xml
 Source1:       simple-jndi-%{version}.pom
